@@ -1,0 +1,13 @@
+<div class="d-flex justify-content-center align-items-center flex-column">
+  <video autoplay playsinline muted id="webcam" width="700" height="700" #video></video>
+
+  <div *ngIf="loading">
+    <img src="./assets/loading.gif">
+  </div>
+
+  <div class="list-group">
+    <div class="list-group-item" *ngFor="let prediction of predictions">
+      {{prediction.className}} - {{prediction.probability}}
+    </div>
+  </div>
+</div>
